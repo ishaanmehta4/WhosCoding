@@ -1,0 +1,482 @@
+
+body{
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(5, 14, 63) 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    min-height: 100vh;
+    /* min-width: 100vw; */
+    overflow: hidden;
+}
+
+.lni
+{
+  cursor: pointer;
+}
+.headercon
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 12vh;
+    padding: 20px;
+    /* background-color: rosybrown; */
+}
+
+.stagecon
+{
+    height: 83vh;
+    width: calc(100vw-8px);
+    overflow: hidden;
+    margin: 4px;
+    display: grid;
+    grid-template-rows: 73vh auto auto;
+    grid-template-columns: 5vw 0vw 20vw 0vw 5vw 20vw 0vw 5vw 20vw 5vw 0vw 20vw;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.5s;
+    /* background-color: white; */
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.bgwhite
+{
+    /* display: none; */
+    grid-row: 1/span 1;
+    grid-column: 1 /span 11;
+    height: 83vh;
+    bottom: 5vh;
+    position: relative;
+    background-color: white;
+
+}
+.hrcontainer
+{
+    /* background-color: yellow    ; */
+    grid-row: 1/span 1;
+    grid-column: 3/span 1;
+}
+
+.hecontainer
+{
+    /* background-color: yellow    ; */
+    grid-row: 1/span 1;
+    grid-column: 6/span 1;
+}
+.cfcontainer
+{
+    /* background-color: yellow    ; */
+    grid-row: 1/span 1;
+    grid-column: 9/span 1;
+}
+
+/* responsive */
+@media only screen and (max-width: 800px)
+{
+    .stagecon
+    {
+        grid-template-rows: 75vh;
+        grid-template-columns: 5vw 5vw 20vw 5vw 5vw 20vw 5vw 5vw 20vw 5vw 5vw;
+
+        height: 40vh;
+    }
+    .hrcontainer
+    {
+        /* background-color: yellow    ; */
+        grid-row: 1/span 1;
+        grid-column: 2/span 8;
+        
+    }
+    
+    .hecontainer
+    {
+        /* background-color: yellow    ; */
+        grid-row: 1/span 1;
+        grid-column: 2/span 8;
+        /* opacity: 0; */
+        /* display: none; */
+
+    }
+    .cfcontainer
+    {
+        /* opacity: 0; */
+        /* background-color: yellow    ; */
+        /* display: none; */
+        grid-row: 1/span 1;
+        grid-column: 2/span 8;
+    }
+    .stagecon
+    {
+        height: max-content;
+        background-color: rgba(0, 0, 0,0);
+        overflow: auto;
+    }
+    .sitecard
+    {
+        margin-bottom: 5vh;
+    }
+    
+
+}
+
+/* responsiveend */
+@keyframes menuin
+{
+    0%
+    {
+        /* position: relative; */
+        /* margin-top: 90px; */
+        opacity: 0;
+    }
+    100%
+    {
+        /* position: relative; */
+        /* margin-top: 0px; */
+        opacity: 1;
+    }
+}
+.whoscoding
+{
+    text-align: center;
+    color: white;
+    font-size: 2.75em;
+    position: relative;
+    top: -6px;
+    font-family: "Lato";
+}
+
+.menubutton
+{
+    color: white;
+    font-size: 2em;
+    float: left;
+    position: relative;
+    z-index: 20;
+}
+
+.menucon
+{
+    margin-top: 15vh;
+    height: 100%;
+    animation: menuin 0.3s  1s 1  backwards;
+    width: max-content;
+    padding-top: 2em;
+    opacity: 0;
+    z-index: -1;
+    /* background-color: white; */
+    position: absolute;
+    /* z-index: 30; */
+}
+
+.menuitem
+{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    z-index: 20;
+    transition: all 0.3s;
+}
+
+.menuitem .lni
+{
+    padding-right: 0.5em;
+}
+
+.menuitem:hover
+{
+    /* background-color: white; */
+    /* color: rgb(11, 24, 100); */
+    filter: brightness(0.7);
+    transform: scale(0.9);
+}
+
+.tabscon
+{
+    display: none;
+    transition:  all 0.3s;
+}
+@media only screen and (max-width: 800px)
+{
+    .menubutton
+    {
+        font-size: 1.5em ;
+    }
+
+    .whoscoding
+    {
+        font-size: 2em;
+        margin-bottom: 1.5em;
+    }
+
+    .headercon
+    {
+        height: 10vh;
+    }
+    .tabscon
+    {
+        height: 5vh;
+        display: grid   ;
+        grid-template-columns: 33.33% 33.34% 33.33%;
+        grid-row: 100%;
+        /* padding-left: 5px; */
+        /* padding-right: 5px; */
+        /* background-color: red; */
+    }
+    .tab
+    {
+        grid-row: span 1;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+        grid-column: span 1;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1em;
+        text-align: center;
+    }
+    .activetab
+    {
+        color: rgba(255, 255, 255, 1);
+        border-bottom: solid 2px rgba(255, 255, 255, 1);
+
+    }
+    .stagecon
+    {
+        grid-template-rows: 71vh;
+    }
+}
+
+.cardcontainer
+{
+    transition: all 0.3s;
+}
+#conmenu
+{
+    display: none;
+}
+.sidebarcon
+{
+    grid-row: 1/span 1;
+    grid-column: 12/span 1 ;
+    /* background-color: rgba(255,255,255,0.3); */
+    backdrop-filter: blur(30px);
+    height: 83vh;
+    position: relative;
+    bottom: 5vh;
+}
+.sidebar
+{
+    height: 100%;
+    overflow: hidden;
+    /* width:100%; */
+    display: grid;
+    /* background-color: red; */
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 8vh 5vh 5vh 5vh 69vh;
+}
+
+.sbheading
+{
+    grid-row: span 1;
+    grid-column: span 2;
+    background-color: rgba(255,255,255,0.8);
+    font-size: 1.8em;
+    line-height: 2em;
+    padding-left: 10px;
+    color: rgb(6, 11, 58);
+    /* color: white; */
+}
+
+.contestlist
+{
+    grid-row: span 1;
+    grid-column: span 2;
+    background-color: rgba(255,255,255,0.6);
+    overflow-x: scroll;
+    width: 200%;
+    padding-left: 5px;
+}
+
+.contest
+{
+    /* border: solid 1px white; */
+    border-radius: 3px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline;
+    background-color: white;
+    font-size: 1.1em;
+    color: rgb(8, 23, 238);
+    position: relative;
+    margin-left: 4px;
+    top: 8px;
+}
+
+.selected
+{
+    color: white;
+    background: linear-gradient(45deg, rgb(11, 24, 100) 0%, rgb(40, 114, 252) 100%);
+}
+
+#insname
+{
+    grid-row: span 1;
+    grid-column: span 2;
+    min-height: max-content;
+    /* text-align: center; */
+    /* border: solid 1px red; */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(8, 23, 238);
+    padding-top: 5px;
+    overflow: hidden;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.selected
+{
+    color: white;
+
+    background: linear-gradient(45deg, rgb(11, 24, 100) 0%, rgb(40, 114, 252) 100%);
+}
+
+#top10con
+{
+    grid-column: 1/span 2;
+    grid-row: span 2;
+    overflow: auto !important; 
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* background-color: rgb(59, 58, 99); */
+    background: linear-gradient(180deg, rgb(41, 41, 41) 0%, rgb(55, 63, 105) 100%)
+}
+
+.participant
+{
+    font-size: 1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    color: rgb(255, 255, 255);
+    border-bottom:solid 1px rgba(255, 255, 255, 0.5) ;
+}
+
+.score
+{
+/* float: right; */
+ padding-left: 20px;
+}
+
+@media only screen and (max-width: 800px)
+{
+    .sidebarcon
+    {
+        display: none;
+    }
+    .bgwhite
+    {
+        display: none;
+    }
+    #top10con
+    {
+        background-color: rgba(255, 255, 255, 0.2);
+        /* background-color: rgba(0,0,0, 0.2); */
+        color: white;
+
+    }
+}
+
+#addinsbtn
+{
+     background: linear-gradient(45deg, rgb(11, 24, 100) 0%, rgb(40, 114, 252) 100%) ;
+     color: white;
+     padding :15px;
+     transition: all 0.3s;
+     border-radius: 5px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     cursor: pointer;
+    position: relative;
+    top: 2px;
+     width: 70%;
+     /* display: inline-block; */
+}
+#addinsbtn:hover
+{
+    filter: brightness(0.7);
+}
+#addinsbtn .lni
+{
+    padding-right: 5px;
+    transform: scale(0.9);
+}
+
+.rank
+{
+    font-size: 1.5em;
+    padding-right: 10px;
+    /* padding-left: 10px; */
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+#justasec
+{
+    font-size: 1.25em;
+    color: white;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+@media only screen and (max-width: 800px)
+{
+    #conmenu
+    {
+        display: block;
+    }
+    .sidebarcon
+    {
+        display: none;
+        position: relative;
+        top: 1vh;
+        grid-row: 1/span 1;
+        grid-column: 2/span 8;
+        width:100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0,0.9);
+        z-index: 30;
+        transform: scale(1.15);
+    }
+    .bgwhite
+    {
+        display: none;
+    }
+}
+
+#contestclose
+{
+    float: right;
+    position: relative;
+    top: 15px;
+    transform: scale(0.8);
+    right: 30px;
+    display: none;
+}
+@media only screen and (max-width: 800px)
+{
+    #contestclose
+    {
+        display: block;
+    }
+}
+
+.lni-pencil
+{
+    float: right;
+    position: relative;
+    right: 33px;
+    top: 4px;
+}

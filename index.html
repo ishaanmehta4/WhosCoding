@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato:100,200,300|Open+Sans:300,400|Raleway:500,300|Roboto|Ubuntu&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/friendlist.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Whoscoding</title>
+    <!-- <script src="https://kit.fontawesome.com/82f1a87244.js" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <div class="menucon">
+        <div class="menuitem" id='conmenu' onclick="showsidebar()"><i class="lni lni-bar-chart"></i>Recent contests</div>
+        <div class="menuitem" onclick="clearnreset()"><i class="lni lni-trash"></i> Clear and reset</div>
+        <div class="menuitem"><i class="lni lni-github"></i> Github</div>
+        <div class="menuitem"><i class="lni lni-code"></i> Contact me</div>
+    </div>
+    <div class="headercon">
+        <div class="menubutton"><i id="menubtn" class="lni lni-menu" onclick="openmenu()"></i></div>
+        <div class="whoscoding">WhosCoding</div>
+    </div>
+    <!-- headerover -->
+
+    <!-- mobiletabs -->
+    <div class="tabscon">
+        <div class="tab activetab" onclick="opentab(0)">CodeForces</div>
+        <div class="tab" onclick="opentab(1)">HackerEarth</div>
+        <div class="tab" onclick="opentab(2)">CodeChef</div>
+    </div>
+    <!-- end of mobiletabs -->
+
+
+    <div class="stagecon">
+        <div class="bgwhite"></div>
+        <div class="sidebarcon">
+            <div class="sidebar">
+            <div class="sbheading">Recent Contests<i id="contestclose" class="lni lni-close" onclick="hidesidebar()"></i></i></div>
+                <div class="contestlist">
+                    <span class="contest selected" onclick="selectcontest(0)">july20b</span>
+                    <span class="contest" onclick="selectcontest(1)">june20b</span>
+                    <span class="contest" onclick="selectcontest(2)">may20b</span>
+                    <!-- <span class="contest">june20</span> -->
+                    <!-- <span class="contest">may20b</span> -->
+                </div>
+                <div class="" id="insname"></div>
+                <!-- <div class="nit ins svn">SVNIT</div> -->
+                <div id="top10con">
+                    <span id="justasec">Add institute to continue.</span>
+                </div>
+            </div>
+        </div>
+        <!-- //hackerRank -->
+        <div class="hrcontainer cardcontainer">
+            <div class="sitecard hackerrankcard">
+                <div class="sitebg"></div>
+                <div class="sitename">CodeForces</div>
+                <div class="gotoicon"><a href='https://codeforces.com' target="new"><i class="lni hoverop hoverrotate lni-arrow-right-circle"></i></a></div>
+                <div class="flist">
+                    <div class="friendcard">
+                        <span class="ratingword hrtext">Rating</span>
+                        <span class="fname">Ishaan Mehta <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hrtext">@ishaanmehta</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hrtext">Rating</span>
+                        <span class="fname">Harsh Tripathi <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hrtext">@tripathiharsh1991</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hrtext">Rating</span>
+                        <span class="fname">Shreyansh <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hrtext">@shreyanshsau</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hrtext">Rating</span>
+                        <span class="fname">Avanish Gupta <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hrtext">@avanish123</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hrtext">Rating</span>
+                        <span class="fname">Aditya Paul <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hrtext">@pauladitya</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hrtext">Rating</span>
+                        <span class="fname">Ritesh Shukla <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hrtext">@shuklar101</span>
+                        <span class="frating">1590</span>
+                    </div>
+                </div>
+                <div class="addplus hrtext">
+                    <!-- <form> -->
+                    <input type="text" placeholder="Username without @" class="addfriend">
+                    <i class="lni addbtn lni-plus" onclick="addcodeforces()"></i>
+
+                    <!-- <input type="submit none" onclick="addhackerrank()"> -->
+                    <!-- </form> -->
+                    <i class="lni plusrotate lni-circle-plus" onclick="handleplus(0)"></i>
+
+                </div>
+            </div>
+        </div>
+        <!-- hackerrank done -->
+        <!-- hackerearth -->
+        <div class="hecontainer cardcontainer">
+            <div class="sitecard hackerearthcard">
+                <div class="sitebg"></div>
+                <div class="sitename">HackerEarth</div>
+                <div class="gotoicon"><a href='https://hackerearth.com' target="new"><i class="lni hoverop hoverrotate lni-arrow-right-circle"></i></a></div>
+                <div class="flist">
+                    <div class="friendcard">
+                        <span class="ratingword hetext">Rating</span>
+                        <span class="fname">Ishaan Mehta <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hetext">@ishaanmehta</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hetext">Rating</span>
+                        <span class="fname">Harsh Tripathi <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hetext">@tripathiharsh1991</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hetext">Rating</span>
+                        <span class="fname">Shreyansh <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hetext">@shreyanshsau</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hetext">Rating</span>
+                        <span class="fname">Avanish Gupta <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hetext">@avanish123</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hetext">Rating</span>
+                        <span class="fname">Aditya Paul <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hetext">@pauladitya</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword hetext">Rating</span>
+                        <span class="fname">Ritesh Shukla <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername hetext">@shuklar101</span>
+                        <span class="frating">1590</span>
+                    </div>
+                </div>
+                <div class="addplus hetext">
+                    <!-- <form> -->
+                    <input type="text" placeholder="Username without @" class="addfriend">
+                    <i class="lni addbtn lni-plus" onclick="addhackerearth()"></i>
+
+                    <!-- <input type="submit none" onclick="addhackerearth()"> -->
+                    <!-- </form> -->
+                    <i class="lni plusrotate lni-circle-plus" onclick="handleplus(1)"></i></div>
+            </div>
+        </div>
+
+        <!-- hackerearth done -->
+        <!-- codechef -->
+        <div class="cfcontainer cardcontainer">
+            <div class="sitecard codechefcard">
+                <div class="sitebg"></div>
+                <div class="sitename">CodeChef</div>
+                <div class="gotoicon"><a href='https://codechef.com' target="new"><i class="lni hoverop hoverrotate lni-arrow-right-circle"></i></a></div>
+                <div class="flist">
+                    <div class="friendcard">
+                        <span class="ratingword cftext">Rating</span>
+                        <span class="fname">Ishaan Mehta <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername cftext">@ishaanmehta</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword cftext">Rating</span>
+                        <span class="fname">Harsh Tripathi <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername cftext">@tripathiharsh1991</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword cftext">Rating</span>
+                        <span class="fname">Shreyansh <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername cftext">@shreyanshsau</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword cftext">Rating</span>
+                        <span class="fname">Avanish Gupta <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername cftext">@avanish123</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword cftext">Rating</span>
+                        <span class="fname">Aditya Paul <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername cftext">@pauladitya</span>
+                        <span class="frating">1590</span>
+                    </div>
+                    <div class="friendcard">
+                        <span class="ratingword cftext">Rating</span>
+                        <span class="fname">Ritesh Shukla <i class="lni trash lni-trash"></i></span>
+                        <span class="fusername cftext">@shuklar101</span>
+                        <span class="frating">1590</span>
+                    </div>
+                </div>
+                <div class="addplus cftext">
+                    <!-- <form> -->
+                    <input type="text" placeholder="Username without @" class="addfriend">
+                    <i class="lni addbtn lni-plus" onclick="addcodechef()"></i>
+
+                    <!-- <input type="submit none" onclick="addcodechef()"> -->
+                    <!-- </form> -->
+                    <i class="lni plusrotate lni-circle-plus" onclick="handleplus(2)"></i></div>
+
+            </div>
+        </div>
+        <!-- codechef done -->
+    </div>
+    <!-- stage end -->
+    <script src="js/index.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/contest.js"></script>
+
+</body>
+
+</html>
