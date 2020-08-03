@@ -217,6 +217,21 @@ body
     color: rgba(188, 161, 30, 1);
 }
 
+.hecontainer .theme
+{
+    color: rgba(37,31,137,1);
+}
+
+.hrcontainer .theme
+{
+    color: rgb(105, 21, 21);
+}
+
+.cfcontainer .theme
+{
+    color: rgba(188, 161, 30, 1);
+}
+
 .friendcard
 {
     display: grid;

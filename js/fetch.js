@@ -7,9 +7,7 @@ hrusers=[];
 document.getElementsByClassName('flist')[1].innerHTML=''
 document.getElementsByClassName('flist')[2].innerHTML=''
 document.getElementsByClassName('flist')[0].innerHTML=''
-// heusernames="ishaanmehta+tripathiharsh1991+saurabhshreyansh17+avanishcodes+aditya.paul18+#";
-// cfusernames="ishaanmehta+harshtripath1+#"
-// hrusernames="zemen+Gennady+#"
+
 
 heusernames=localStorage.getItem('heusernames')
 cfusernames=localStorage.getItem('cfusernames')
@@ -49,9 +47,9 @@ function createfcard(user, site)
     else rating=user.rating
 
     src='<div class="friendcard activecard">'
-    src+='<span class="ratingword ">Rating</span>'
+    src+='<span class="ratingword theme">Rating</span>'
     src+='<span class="fname">'+name+'<i class="lni none trash lni-trash"></i></span>'
-    src+='<span class="fusername ">@'+user.username+'</span>'
+    src+='<span class="fusername theme">@'+user.username+'</span>'
     src+='<span class="frating">'+rating+'</span>'
     src+='</div>'
 
@@ -144,7 +142,7 @@ while(1)
     if(heusernames[i]!='+'&&heusernames[i]!='#') username+=heusernames[i];
     if(heusernames[i]=='+')
     {
-        // u=fetchHE(username);
+        u=fetchHE(username);
         console.log(username);
         username=""
     }
@@ -159,7 +157,7 @@ while(1)
     if(cfusernames[i]!='+'&&cfusernames[i]!='#') username+=cfusernames[i];
     if(cfusernames[i]=='+')
     {
-        // fetchCF(username);
+        fetchCF(username);
         console.log(username);
         username=""
     }
@@ -176,7 +174,7 @@ while(1)
     if(hrusernames[i]!='+'&&hrusernames[i]!='#') username+=hrusernames[i];
     if(hrusernames[i]=='+')
     {
-        // fetchHR(username);
+        fetchHR(username);
         console.log(username);
         username=""
     }
