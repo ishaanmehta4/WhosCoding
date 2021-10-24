@@ -1,6 +1,6 @@
 
 body{
-    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(5, 14, 63) 100%);
+    background: linear-gradient(180deg, rgb(119, 167, 238) 0%, rgb(44, 202, 241) 100%);
     background-repeat: no-repeat;
     background-size: contain;
     background-size: cover;
@@ -54,7 +54,7 @@ body{
 {
     /* display: none; */
     grid-row: 1/span 1;
-    grid-column: 1 /span 11;
+    grid-column: 1 /span 12;
     height: 83vh;
     bottom: 5vh;
     position: relative;
@@ -79,6 +79,12 @@ body{
     /* background-color: yellow    ; */
     grid-row: 1/span 1;
     grid-column: 9/span 1;
+}
+.cccontainer
+{
+    /* background-color: yellow    ; */
+    grid-row: 1/span 1;
+    grid-column: 12/span 1;
 }
 
 /* responsive */
